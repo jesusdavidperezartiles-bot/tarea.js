@@ -1,33 +1,19 @@
-let nombreProducto1 = "Television";
-let precioUnitario1 = 16000;
-let cantidadStock1 = 4;
+let productos = [
+  { nombre: "Laptop", precio: 22000, stock: 4 },
+  { nombre: "Bocina", precio: 500, stock: 10 },
+  { nombre: "Celular", precio: 15000, stock: 20 }
+];
 
-let nombreProducto2 = "Bocina";
-let precioUnitario2 = 5000;
-let cantidadStock2 = 10;
-
-let nombreProducto3 = "celular";
-let precioUnitario3 = 12000;
-let cantidadStock3 = 20;
-
-let valorProducto1 = precioUnitario1 * cantidadStock1;
-let valorProducto2 = precioUnitario2 * cantidadStock2;
-let valorProducto3 = precioUnitario3 * cantidadStock3;
-
-let valorTotalInventario = valorProducto1 + valorProducto2 + valorProducto3;
+let valorTotalInventario = 0;
 
 console.log("== SISTEMA BASICO DE INVENTARIO ==");
 
-console.log("Producto 1 registrado: " + nombreProducto1);
-console.log("Precio unitario del producto 1: $" + precioUnitario1);
-console.log("Unidades disponibles del producto 1: " + cantidadStock1);
+productos.forEach(p => {
+  let valor = p.precio * p.stock;
+  valorTotalInventario += valor;
+  console.log(`Producto registrado: ${p.nombre}`);
+  console.log(`Precio unitario: $${p.precio}`);
+  console.log(`Unidades disponibles: ${p.stock}`);
+});
 
-console.log("Producto 2 registrado: " + nombreProducto2);
-console.log("Precio unitario del producto 2: $" + precioUnitario2);
-console.log("Unidades disponibles del producto 2: " + cantidadStock2);
-
-console.log("Producto 3 registrado: " + nombreProducto3);
-console.log("Precio unitario del producto 3: $" + precioUnitario3);
-console.log("Unidades disponibles del producto 3: " + cantidadStock3);
-
-console.log("Valor total del inventario: $" + valorTotalInventario);
+console.log(`Valor total del inventario: $${valorTotalInventario}`);
