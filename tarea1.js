@@ -1,6 +1,6 @@
 let nombreProducto = "Bocina";
-let precioUnitario = 5000;
-let cantidadStock = 4;
+let precioUnitario = 500;
+let cantidadStock = 10;
 
 let valorTotal = precioUnitario * cantidadStock;
 
